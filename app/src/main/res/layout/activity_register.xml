@@ -5,25 +5,42 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Login.RegisterActivity">
 
     <EditText
-        android:id="@+id/edtLoginEmail"
+        android:id="@+id/edtRegisterNome"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/login_email"
+        android:hint="@string/login_register_nome"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19999999"
+        app:layout_constraintVertical_bias="0.26999998"
+        android:autofillHints="Johnny Depp" />
+
+    <EditText
+        android:id="@+id/edtRegisterEmail"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/login_email"
+        android:inputType="textEmailAddress"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterNome"
+        app:layout_constraintVertical_bias="0.0"
         android:autofillHints="example@example.com" />
 
     <EditText
-        android:id="@+id/edtLoginPassword"
+        android:id="@+id/edtRegisterPassword"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -34,37 +51,54 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterEmail"
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="********" />
+    <EditText
+        android:id="@+id/edtRegisterPasswordAgain"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/login_register_passwordAgain"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterPassword"
         app:layout_constraintVertical_bias="0.0"
         android:autofillHints="********" />
 
     <Button
-        android:id="@+id/btnEntrar"
+        android:id="@+id/btnRegistrar"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="440dp"
+        android:layout_marginBottom="96dp"
         android:backgroundTint="@android:color/holo_green_light"
-        android:text="@string/login_btnEntrar"
+        android:text="@string/login_btnRegistrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.82"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisterPasswordAgain"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtRegistrar"
+        android:id="@+id/txtFacaLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:linksClickable="true"
-        android:text="@string/login_registrar"
+        android:text="@string/login_register_faca_login"
         android:textColorLink="#2196F3"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
         app:layout_constraintVertical_bias="0.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
